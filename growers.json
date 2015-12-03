@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Name": "GrowerID", "description": "name: GrowerID<br>GrowerID: Max Grower<br>Crop Type: cauliflower<br>Crop Yield: 8<br>Availability: barter", "GrowerID": "Max Grower", "Crop_Type": "cauliflower", "Crop_Yield": "8", "Availability": "barter" }, "geometry": { "type": "Point", "coordinates": [ -121.496542100000013, 38.5601046, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "GrowerID", "description": "name: GrowerID<br>GrowerID: Leaf Erickson<br>Crop Type: potato<br>Crop Yield: 20<br>Availability: barter", "GrowerID": "Leaf Erickson", "Crop_Type": "potato", "Crop_Yield": "20", "Availability": "barter" }, "geometry": { "type": "Point", "coordinates": [ -121.4991331, 38.5607254, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "GrowerID", "description": "name: GrowerID<br>GrowerID: Michelle Growbama<br>Crop Type: pumpkin<br>Crop Yield: 17<br>Availability: free", "GrowerID": "Michelle Growbama", "Crop_Type": "pumpkin", "Crop_Yield": "17", "Availability": "free" }, "geometry": { "type": "Point", "coordinates": [ -121.5005493, 38.558477, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "GrowerID", "description": "name: GrowerID<br>GrowerID: Grown of Arc<br>Crop Type: kale<br>Crop Yield: 6<br>Availability: for sale", "GrowerID": "Grown of Arc", "Crop_Type": "kale", "Crop_Yield": "6", "Availability": "for sale" }, "geometry": { "type": "Point", "coordinates": [ -121.4928782, 38.560608, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "GrowerID", "description": "name: GrowerID<br>GrowerID: Groprah Winfrey<br>Crop Type: spinach<br>Crop Yield: 3<br>Availability: none", "GrowerID": "Groprah Winfrey", "Crop_Type": "spinach", "Crop_Yield": "3", "Availability": "none" }, "geometry": { "type": "Point", "coordinates": [ -121.495249300000012, 38.5577388, 0.0 ] } }
+]
+}

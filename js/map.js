@@ -1,6 +1,7 @@
 var map,
     userloc = {"lat": 38.5725, "lon": -121.4680, "acc": 0},
-    locoptions = {timeout: 5};
+    locoptions = {timeout: 5},
+    growers;
 
 function initMap() {
     "use strict";
@@ -54,4 +55,11 @@ $(document).ready(function () {
     // Initialize the map
     //map = L.map('map').setView([38.5725, -121.4680], 13);
     initMap();
+    growers = L.geoJson().addTo(map);
+    $.getJSON('growers.json', function (json) {
+        var geojsonFeature;
+        geojsonFeature = json;
+        growers.addData(geojsonFeature);
+    });
+
 });
