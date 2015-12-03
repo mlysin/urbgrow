@@ -29,6 +29,7 @@
   <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="js/map.js"></script>
+  <script type="text/javascript" src="js/plants.js"></script>
     
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -71,11 +72,12 @@
       </div>
    </div>
 
+      
 <div class="row">
-<!-- Form -->      
-    <div class="ten columns">
-    <form>
    
+    <div class="ten columns">
+
+   <div class="row">
       <!--<div class="six columns">
         <label for="exampleEmailInput">Your email</label>
         <input class="six columns" type="text" placeholder="you@email.com">
@@ -84,6 +86,7 @@
       <div class="six columns">
         <label for="exampleRecipientInput">How soon would you like to harvest?</label>
         <select id="sWhen">
+          <option selected value="" placeholder="" style="color:#DCDDDB;">Pick Type</option> 
           <option value="Option 1">6 months or fewer</option>
           <option value="Option 2">over 6 months</option>
         </select>
@@ -92,59 +95,69 @@
       <div class="six columns">
         <label for="exampleRecipientInput">Where are you planning to plant?</label>
         <select id="sWhere">
-          <option value="Option 1">indoors, pots</option>
-          <option value="Option 2">outdoors, pots</option>
-          <option value="Option 3">outdoors, raised beds</option>
-          <option value="Option 4">outdoors, in the ground</option>
+          <option selected value="" placeholder="" style="color:#DCDDDB;">Pick Type</option> 
+          <option value="1">indoors, pots</option>
+          <option value="2">outdoors, pots</option>
+          <option value="3">outdoors, raised beds</option>
+          <option value="4">outdoors, in the ground</option>
         </select>
       </div>
 
       <div class="u-full-width">
-        <label for="exampleRecipientInput">If outdoors, in the ground</label>
-        <select class="u-full-width" id="sPotted">
-          <option value="Option 1">loam</option>
-          <option value="Option 2">clay</option>
-          <option value="Option 3">sandy</option>
+        <label for="exampleRecipientInput">If outdoors, in the ground, what's your soil type (link to tip)</label>
+        <select class="u-full-width" id="sPotted" onchange="soiltip(this);filter();">
+          <option selected value="" placeholder="" style="color:#DCDDDB;">Pick Type</option> 
+          <option value="1">loam</option>
+          <option value="2">clay</option>
+          <option value="3">sandy</option>
         </select>
       </div>
       
       <div class="u-full-width">
-        If loam: Your soil is ideal for growing most plants. Please click on continue to see the list of edible plants you can grow.
-        Else (clay or sand): Your soil needs to be amended ( <a href="http://www.smilinggardener.com/lessons/how-to-improve-clay-soil-and-sandy-soil">instructions</a> ).
+        <div id="soiltip" class="tip"></div>
       </div>
-
-      <div class="u-full-width">
-        After you have amended the soil, please click on continue to see the list of edible plants you can grow.</br>
-      </div>
-
-      <div class="u-full-width">
-        <p>
-        <h4><u>Indoors</u></h4><br>
-        Please use any garden or potting soil for planting.
-        </p>
-      </div>
-
+</div>
+<div class="row">
+    
       <div class="u-full-width">
         <label for="exampleEmailInput">Enter the annual minimum and maximum indoor temperatures:</label>
         <input class="three columns" type="text" placeholder="max">
         <input class="three columns" type="text" placeholder="min">
       </div>
-
+</div>
+<div class="row">
       <div class="u-full-width">
         <label for="exampleEmailInput">Enter the value (lux) of <a href="https://play.google.com/store/apps/details?id=com.lightmeterpro.luxmeter">light intensity</a> in your room at noon:</label>
         <input class="three columns" type="text" placeholder="lux">
       </div>
-
-
+</div>
+    
+<div class="row">    
+    <div class="u-full-width">
+    <h4>Suggested Plants</h4>
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Crop</th>
+          <th>Health</th>
+          <th>Soil</th>
+          <th>Fertilizer</th>
+          <th>Hardware</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    </div>    
+    <div class="tip">Big yard? what about Honeybees, Chickens/Quails, etc... </div>
+    
 
       	<!--<div class="ten columns">
         Alex, please use the average and min. and max. temperatures and the light intensity. If these values are more or less than the ranges in the table, display the warning "Your indoor temperature is too high!" or "Your indoor temperature is too low!" and/or "Your indoor lighting needs to be improved!" Then display "Please click on continue to see the list of edible plants you can grow and material for growing them. By clicking on each plant name, you will be able to see tips for growing them." Display the plants that can be grown indoors (with embedded links with growing information) along with the map of stores where you can buy supplies.
       	</div>-->
-  		</form>
-  		<!-- End Form Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
-      </div>
-    
-      <div class="two columns"> Ads or Adwords for Supplies goes here.  </div>
+</div>
+</div>    
+      <div class="two columns holding"> Ads or Adwords for Supplies goes here.  </div>
 </div>
     
    <div class="row">

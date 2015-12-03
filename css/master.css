@@ -4,3 +4,8 @@
     height: 400px;
     width: 100%;
 }
+
+.tip {
+    background: #ABD291;
+    padding: .5em;
+}
