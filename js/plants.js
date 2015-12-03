@@ -17,7 +17,7 @@ function soiltip(value) {
     
 }
 
-function filter(this) {
+function filter() {
     "use strict";
     //Does nothing for now, needs to filter
     
